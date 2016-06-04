@@ -29,23 +29,10 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
 
     }
 
-    private String getPlayerMsg() {
-
-        if (hasWon) {
-            return "Congrats " + strPlayerName[currentPlayer - 1] + ", you are the winner!";
-        } else if (firstTime) {
-            return "" + strPlayerName[0] + " you are red, " + strPlayerName[1] + " you are blue. Press new game to start";
-        } else {
-            return "" + strPlayerName[currentPlayer - 1] + " move";
-        }
-
-    }
-
     private void resetBoard() {
 
         hasWon = false;
         currentPlayer = 1;
-        strStatusMsg = getPlayerMsg();
         cellMatrix.resetMatrix();
         repaint();
 
@@ -56,15 +43,6 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
         imgPlayer[0] = imgRed;
         imgPlayer[1] = imgBlue;
         resetBoard();
-
-    }
-
-    public void setNames(String strPlayer1Name, String strPlayer2Name) {
-
-        strPlayerName[0] = strPlayer1Name;
-        strPlayerName[1] = strPlayer2Name;
-        strStatusMsg = getPlayerMsg();
-        repaint();
 
     }
 
@@ -86,7 +64,7 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
                     if (playerCell != 0) {
 
                         try {
-                            g.drawImage(imgPlayer[playerCell - 1][pieceCell], ((column + 1) * 50), ((row + 1) * 50), this);
+                            g.drawImage(imgPlayer[playerCell - 1][pieceCell], ((column ) * 50+50), ((row ) * 50+50), this);
                         } catch (ArrayIndexOutOfBoundsException e) {
                         }
                     }
@@ -97,10 +75,6 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
         if (isDragging) {
             g.drawImage(imgPlayer[currentPlayer - 1][pieceBeingDragged], (currentX - 25), (currentY - 25), this);
         }
-
-        g.setColor(new Color(0xb58863));
-        g.drawString(strStatusMsg, 50, 475);
-
         vecPaintInstructions.clear(); //clear all paint instructions
     }
 
@@ -225,7 +199,6 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
             if (cellMatrix.checkWinner(currentPlayer)) {
 
                 hasWon = true;
-                strStatusMsg = getPlayerMsg();
 
             } else {
 
@@ -234,9 +207,6 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
                 } else {
                     currentPlayer = 1;
                 }
-
-                strStatusMsg = getPlayerMsg();
-
             }
 
         } else {

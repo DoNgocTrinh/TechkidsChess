@@ -1,5 +1,5 @@
 public class King extends ChessPiece {
-    
+
     public boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix) {
 
         finalDesRow = desRow;

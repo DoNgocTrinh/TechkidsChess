@@ -3,8 +3,7 @@ import javax.swing.JFrame;
 
 public class Chess extends JFrame {
 
-    public static void main(String[] args) //With applications, you have to specify a main method (not with applets)
-    {
+    public static void main(String[] args) {
 
         JFrame.setDefaultLookAndFeelDecorated(true); //Make it look nice
         JFrame frame = new JFrame("Chess Game"); //Title
@@ -14,7 +13,7 @@ public class Chess extends JFrame {
         frame.setContentPane(chessWindow.createGUI(frame));
         frame.addWindowFocusListener(chessWindow);
 
-        frame.setSize(550, 650);
+        frame.setSize(550, 600);
         frame.setResizable(false);
         frame.setVisible(true);
         frame.pack();

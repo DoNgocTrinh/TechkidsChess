@@ -14,7 +14,7 @@ public class ChessBoard extends Canvas {
 
         if (vecPaintInstructions.size() == 0) {
 
-            g.setColor(new Color(75, 141, 221)); //Light blue
+            g.setColor(new Color(0x4CAF50)); //Light blue
             g.fillRect(0, 0, 500, 50); //North border
             g.fillRect(0, 0, 50, 500); //West border
             g.fillRect(0, 450, 500, 50); //South border
@@ -25,7 +25,7 @@ public class ChessBoard extends Canvas {
 
         }
 
-        g.setColor(new Color(75, 141, 221));
+        g.setColor(new Color(0x4CAF50));
         g.fillRect(50, 450, 450, 50); //Paint over the current status text
 
         for (int i = 0; i < vecPaintInstructions.size(); i++) {
@@ -70,7 +70,7 @@ public class ChessBoard extends Canvas {
 
         }
 
-        g.fillRect((50 + (column * 50)), (50 + (row * 50)), 50, 50);
+        g.fillRect((50+(column * 50)), (50+(row * 50)), 50, 50);
 
     }
 
