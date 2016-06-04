@@ -27,8 +27,7 @@ public abstract class ChessPiece {
 
         if (straightAxis) //Moving along a straight axis (rock, queen)
         {
-
-            if ((startColumn == desColumn) && (startRow != desRow)) //Moving along the same column
+            if ((startColumn == desColumn) || (startRow != desRow)) //Moving along the same column
             {
 
                 if (desRow < startRow) //Moving N
@@ -39,7 +38,6 @@ public abstract class ChessPiece {
                         if (!checkAxisMove(newRow, desColumn, playerMatrix)) {
                             return false;
                         }
-
                     }
 
                 } else //Moving S
@@ -54,39 +52,6 @@ public abstract class ChessPiece {
                     }
 
                 }
-
-            } else if ((startRow == desRow) && (startColumn != desColumn)) //Moving along the same row
-            {
-
-                if (desColumn < startColumn) //Moving W
-                {
-
-                    for (int newColumn = (startColumn - 1); newColumn > desColumn; newColumn--) {
-
-                        if (!checkAxisMove(desRow, newColumn, playerMatrix)) {
-                            return false;
-                        }
-
-                    }
-
-                } else //Moving E
-                {
-
-                    for (int newColumn = (startColumn + 1); newColumn < desColumn; newColumn++) {
-
-                        if (!checkAxisMove(desRow, newColumn, playerMatrix)) {
-                            return false;
-                        }
-
-                    }
-
-                }
-
-            } else //If moved diagonally
-            {
-
-                strErrorMsg = "Should not see this error message";
-                return false;
 
             }
 
@@ -172,14 +137,7 @@ public abstract class ChessPiece {
                     return false;
                 }
 
-            } else //Not a diagonal move
-            {
-
-                strErrorMsg = "Should never see this error message";
-                return false;
-
             }
-
         }
 
         finalDesRow = desRow;

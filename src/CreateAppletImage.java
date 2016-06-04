@@ -9,7 +9,6 @@ public class CreateAppletImage {
 
     public Image getImage(Object parentClass, String path, int fileSize) {
 
-
         try {
             return ImageIO.read(new File("src/" + path));
         } catch (IOException e) {
