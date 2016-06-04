@@ -1,5 +1,5 @@
 public class Rook extends ChessPiece {
-    public boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix) {
+    public boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer) {
 
         if (startRow != desRow && startColumn != desColumn) //If moved diagonal
         {

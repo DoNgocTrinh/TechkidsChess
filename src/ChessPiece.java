@@ -1,4 +1,4 @@
-public class ChessPiece {
+public abstract class ChessPiece {
 
     protected int finalDesRow = 0;
     protected int finalDesColumn = 0;
@@ -188,6 +188,8 @@ public class ChessPiece {
         return true;
 
     }
+
+    public abstract boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer);
 
     public int getDesRow() {
         return finalDesRow;

@@ -1,5 +1,5 @@
 public class Knight extends ChessPiece {
-    public boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix) {
+    public boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer) {
 
         finalDesRow = desRow;
         finalDesColumn = desColumn;
