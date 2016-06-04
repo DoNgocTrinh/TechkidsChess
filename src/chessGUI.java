@@ -11,8 +11,8 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
 	private JButton cmdNewGame, cmdSetNames;
 	private JTextField txtPlayerOne, txtPlayerTwo;
 	private JLabel lblPlayerOne, lblPlayerTwo;
-	private String[] strRedPieces = {"redPawn.gif","redRock.gif","redKnight.gif","redBishop.gif","redQueen.gif","redKing.gif"};
-	private String[] strBluePieces = {"bluePawn.gif","blueRock.gif","blueKnight.gif","blueBishop.gif","blueQueen.gif","blueKing.gif"};
+	private String[] strBlackPieces = {"blackPawn.png","blackRock.png","blackKnight.png","blackBishop.png","blackQueen.png","blackKing.png"};
+	private String[] strWhitePieces = {"whitePawn.png","whiteRock.png","whiteKnight.png","whiteBishop.png","whiteQueen.png","whiteKing.png"};
 	private Color clrBlue = new Color(75,141,221);
 	private MediaTracker mt;
 	
@@ -57,8 +57,8 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
 			for (int i = 0; i < 6; i++)
 			{				
 			
-				imgRed[i] = createImage.getImage(this, "images/" + strRedPieces[i], 5000);
-				imgBlue[i] = createImage.getImage(this, "images/" + strBluePieces[i], 5000);
+				imgRed[i] = createImage.getImage(this, "images/" + strBlackPieces[i], 5000);
+				imgBlue[i] = createImage.getImage(this, "images/" + strWhitePieces[i], 5000);
 				mt.addImage(imgRed[i], 0);
 				mt.addImage(imgBlue[i], 0);
 				
