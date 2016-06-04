@@ -15,6 +15,8 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
     private boolean isClicked=false;
     private final String MESS_START="Click New Game to start!";
     private final String MESS_IN_GAME="You are in game!";
+    private final String PLAYER1="Player 01";
+    private final String PLAYER2="Player 02";
     private JLabel label;
 
 
@@ -69,7 +71,6 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
 
         panRoot.add(mainChessBoard, BorderLayout.NORTH);
         panRoot.add(panBottomHalf, BorderLayout.SOUTH);
-
         panBottomHalf.add(panel, BorderLayout.NORTH);
         panBottomHalf.add(panNewGame, BorderLayout.SOUTH);
         panNewGame.add(cmdNewGame);

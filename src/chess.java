@@ -5,8 +5,7 @@ public class Chess extends JFrame {
 
     public static void main(String[] args) {
 
-        JFrame.setDefaultLookAndFeelDecorated(true); //Make it look nice
-        JFrame frame = new JFrame("Chess Game"); //Title
+        JFrame frame = new JFrame("Techkids - Chess"); //Title
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         ChessGUI chessWindow = new ChessGUI();
