@@ -2,24 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76f2158d-2950-4750-9c30-c5e5685bdf61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/blackBishop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/blackKing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/blackKnight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/blackPawn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/blackQueen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/blackRock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/whiteBishop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/whiteKing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/whiteKnight.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/whitePawn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/whiteQueen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/whiteRock.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/ChessGUI.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/ChessGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/CreateAppletImage.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/CreateAppletImage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/redBishop.gif" afterPath="$PROJECT_DIR$/out/production/ChessDemo/images/redBishop.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/brown.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/blueBishop.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/blueKing.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/blueKnight.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/bluePawn.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/blueQueen.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/blueRock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/redBishop.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/redKing.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/redKnight.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/redPawn.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/redQueen.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ChessDemo/images/redRock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueBishop.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueBishop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueKing.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueKing.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueKnight.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueKnight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/bluePawn.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/bluePawn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueQueen.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueQueen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueRock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/blueRock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redBishop.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redBishop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redKing.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redKing.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redKnight.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redKnight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redPawn.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redPawn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redQueen.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redQueen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redRock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/redRock.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CreateAppletImage.java" afterPath="$PROJECT_DIR$/src/CreateAppletImage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/chessGUI.java" afterPath="$PROJECT_DIR$/src/chessGUI.java" />
     </list>
     <ignored path="TechkidsChess.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -247,6 +267,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TechkidsChess" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TechkidsChess" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -700,7 +738,7 @@
       <option name="presentableId" value="Default" />
       <updated>1465062468954</updated>
       <workItem from="1465062470057" duration="847000" />
-      <workItem from="1465064696567" duration="1419000" />
+      <workItem from="1465064696567" duration="1520000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1465065293738</created>
@@ -709,11 +747,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465065293738</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update chess pieces">
+      <created>1465066135212</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1465066135212</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2266000" />
+    <option name="totallyTimeSpent" value="2367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -751,7 +796,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update chess pieces" />
+    <option name="LAST_COMMIT_MESSAGE" value="update chess pieces" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
