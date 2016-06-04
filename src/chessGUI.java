@@ -3,11 +3,11 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.JOptionPane;
 
-public class chessGUI implements ActionListener, KeyListener, WindowFocusListener
+public class ChessGUI implements ActionListener, KeyListener, WindowFocusListener
 {
 	
-	private windowChessBoard mainChessBoard;
-	private objCreateAppletImage createImage;
+	private WindowChessBoard mainChessBoard;
+	private CreateAppletImage createImage;
 	private JButton cmdNewGame, cmdSetNames;
 	private JTextField txtPlayerOne, txtPlayerTwo;
 	private JLabel lblPlayerOne, lblPlayerTwo;
@@ -27,8 +27,8 @@ public class chessGUI implements ActionListener, KeyListener, WindowFocusListene
 		panRoot.setOpaque(true);
 	    panRoot.setPreferredSize(new Dimension(550,650));
 		
-		mainChessBoard = new windowChessBoard();
-		createImage = new objCreateAppletImage();
+		mainChessBoard = new WindowChessBoard();
+		createImage = new CreateAppletImage();
 		
 		mainChessBoard.setSize(new Dimension(500, 500));
 		
@@ -78,7 +78,7 @@ public class chessGUI implements ActionListener, KeyListener, WindowFocusListene
 		catch (NullPointerException e)
 		{
 			
-			JOptionPane.showMessageDialog(null, "Unable to load images. There should be a folder called images with all the chess pieces in it. Try downloading this programme again", "Unable to load images", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Unable to load images. There should be a folder called images with all the Chess pieces in it. Try downloading this programme again", "Unable to load images", JOptionPane.WARNING_MESSAGE);
 			cmdNewGame.setEnabled(false);
 			cmdSetNames.setEnabled(false);
 			

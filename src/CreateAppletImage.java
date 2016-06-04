@@ -2,7 +2,7 @@ import java.awt.*;
 import java.io.*;
 import javax.swing.ImageIcon;
 
-public class objCreateAppletImage
+public class CreateAppletImage
 {
 	
 	private String strErrorMsg = "";

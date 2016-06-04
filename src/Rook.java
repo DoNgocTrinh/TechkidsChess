@@ -1,4 +1,4 @@
-public class objRock extends objChessPieces
+public class Rook extends ChessPiece
 {
 	
 	public void objRock ()

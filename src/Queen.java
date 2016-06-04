@@ -1,4 +1,4 @@
-public class objQueen extends objChessPieces
+public class Queen extends ChessPiece
 {
 	
 	public void objQueen ()

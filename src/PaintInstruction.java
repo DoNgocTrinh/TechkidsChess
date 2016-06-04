@@ -1,18 +1,18 @@
-public class objPaintInstruction
+public class PaintInstruction
 {
 	
 	private int startRow = 0, startColumn = 0, rowCells = 0, columnCells = 0;
 	
-	public objPaintInstruction ()
+	public PaintInstruction()
 	{
 	}
 	
-	public objPaintInstruction (int firstRow, int firstColumn)
+	public PaintInstruction(int firstRow, int firstColumn)
 	{
 		calculateRedrawCells (firstRow, firstColumn);
 	}
 	
-	public objPaintInstruction (int startRow, int startColumn, int numCells)
+	public PaintInstruction(int startRow, int startColumn, int numCells)
 	{
 		
 		this.startRow = startRow;

@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.JOptionPane;
 import javax.swing.JDialog;
 
-public class windowChessBoard extends objChessBoard implements MouseListener, MouseMotionListener
+public class WindowChessBoard extends ChessBoard implements MouseListener, MouseMotionListener
 {
 	
 	private final int refreshRate = 5; //Amount of pixels moved before screen is refreshed
@@ -11,19 +11,19 @@ public class windowChessBoard extends objChessBoard implements MouseListener, Mo
 	private Image[][] imgPlayer = new Image[2][6];
 	private String[] strPlayerName = {"Veerle", "Natasja"};
 	private String strStatusMsg = "";
-	private objCellMatrix cellMatrix = new objCellMatrix();
+	private CellMatrix cellMatrix = new CellMatrix();
 	private int currentPlayer = 1, startRow = 0, startColumn = 0, pieceBeingDragged = 0;
 	private int startingX = 0, startingY = 0, currentX = 0, currentY = 0, refreshCounter = 0;
 	private boolean firstTime = true, hasWon = false, isDragging = false;
 	
-	private objPawn pawnObject = new objPawn();
-	private objRock rockObject = new objRock();
-	private objKnight knightObject = new objKnight();
-	private objBishop bishopObject = new objBishop();
-	private objQueen queenObject = new objQueen();
-	private objKing kingObject = new objKing();
+	private Pawn pawnObject = new Pawn();
+	private Rook rockObject = new Rook();
+	private Knight knightObject = new Knight();
+	private Bishop bishopObject = new Bishop();
+	private Queen queenObject = new Queen();
+	private King kingObject = new King();
 	
-	public windowChessBoard ()
+	public WindowChessBoard()
 	{
 		
 		this.addMouseListener(this);
@@ -85,7 +85,7 @@ public class windowChessBoard extends objChessBoard implements MouseListener, Mo
 		for (int i = 0; i < vecPaintInstructions.size(); i++)
 		{
 			
-			currentInstruction = (objPaintInstruction)vecPaintInstructions.elementAt(i);
+			currentInstruction = (PaintInstruction)vecPaintInstructions.elementAt(i);
 			int paintStartRow = currentInstruction.getStartRow();
 			int paintStartColumn = currentInstruction.getStartColumn();
 			int rowCells = currentInstruction.getRowCells();
@@ -314,10 +314,10 @@ public class windowChessBoard extends objChessBoard implements MouseListener, Mo
 	private void updatePaintInstructions (int desRow, int desColumn)
 	{
 		
-		currentInstruction = new objPaintInstruction(startRow, startColumn, 1);
+		currentInstruction = new PaintInstruction(startRow, startColumn, 1);
 		vecPaintInstructions.addElement(currentInstruction);
 			
-		currentInstruction = new objPaintInstruction(desRow, desColumn);
+		currentInstruction = new PaintInstruction(desRow, desColumn);
 		vecPaintInstructions.addElement(currentInstruction);
 		
 	}

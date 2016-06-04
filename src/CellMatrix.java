@@ -1,4 +1,4 @@
-public class objCellMatrix
+public class CellMatrix
 {
 	
 	private int[][] playerMatrix = new int[8][8]; //Stores which player is in a cell. 0 empty, 1 player one, 2 player two

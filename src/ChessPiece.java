@@ -1,11 +1,11 @@
-public class objChessPieces
+public class ChessPiece
 {
 	
 	protected int finalDesRow = 0;
 	protected int finalDesColumn = 0;
 	protected String strErrorMsg = "";
 	
-	public objChessPieces ()
+	public ChessPiece()
 	{
 	}
 	//Checks the cell to make sure it is empty

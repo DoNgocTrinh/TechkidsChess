@@ -2,10 +2,10 @@
 import java.awt.*;
 import java.util.Vector;
 
-public class objChessBoard extends Canvas
+public class ChessBoard extends Canvas
 {
 	
-	protected objPaintInstruction currentInstruction = null;
+	protected PaintInstruction currentInstruction = null;
 	protected Vector vecPaintInstructions = new Vector();
 	
 	public void chessBoard ()
@@ -29,7 +29,7 @@ public class objChessBoard extends Canvas
 			g.fillRect(0,450,500,50); //South border
 			g.fillRect(450,0,50,500); //East border
 
-			currentInstruction = new objPaintInstruction(0,0,8);
+			currentInstruction = new PaintInstruction(0,0,8);
 			vecPaintInstructions.addElement(currentInstruction);
 			
 		}
@@ -40,7 +40,7 @@ public class objChessBoard extends Canvas
 		for (int i = 0; i < vecPaintInstructions.size(); i++)
 		{
 			
-			currentInstruction = (objPaintInstruction)vecPaintInstructions.elementAt(i);
+			currentInstruction = (PaintInstruction)vecPaintInstructions.elementAt(i);
 			int startRow = currentInstruction.getStartRow();
 			int startColumn = currentInstruction.getStartColumn();
 			int rowCells = currentInstruction.getRowCells();
@@ -96,7 +96,7 @@ public class objChessBoard extends Canvas
 		
 	}	
 	//Protected means it can only be used by this class, and classes extending it
-	protected void drawExtra (Graphics g) //Any class extending the chess board can use this method to add extra things like player pieces
+	protected void drawExtra (Graphics g) //Any class extending the Chess board can use this method to add extra things like player pieces
 	{
 	}
 	
