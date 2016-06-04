@@ -16,7 +16,7 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
     private boolean firstTime = true, hasWon = false, isDragging = false;
 
     private Pawn pawnObject = new Pawn();
-    private Rook rockObject = new Rook();
+    private Rook rookObject = new Rook();
     private Knight knightObject = new Knight();
     private Bishop bishopObject = new Bishop();
     private Queen queenObject = new Queen();
@@ -99,7 +99,7 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
                     legalMove = pawnObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
                     break;
                 case 1:
-                    legalMove = rockObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
+                    legalMove = rookObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
                     break;
                 case 2:
                     legalMove = knightObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
@@ -130,8 +130,8 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
                     newDesColumn = pawnObject.getDesColumn();
                     break;
                 case 1:
-                    newDesRow = rockObject.getDesRow();
-                    newDesColumn = rockObject.getDesColumn();
+                    newDesRow = rookObject.getDesRow();
+                    newDesColumn = rookObject.getDesColumn();
                     break;
                 case 2:
                     newDesRow = knightObject.getDesRow();
@@ -160,8 +160,8 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
                 boolean canPass = false;
                 int newPiece = 2;
                 String strNewPiece = "Rock";
-                String[] strPieces = {"Rock", "Knight", "Bishop", "Queen"};
-                JOptionPane digBox = new JOptionPane("Choose the piece to change your pawn into", JOptionPane.QUESTION_MESSAGE, JOptionPane.OK_CANCEL_OPTION, null, strPieces, "Rock");
+                String[] strPieces = {"Rook", "Knight", "Bishop", "Queen"};
+                JOptionPane digBox = new JOptionPane("Choose the piece to change your pawn into", JOptionPane.QUESTION_MESSAGE, JOptionPane.OK_CANCEL_OPTION, null, strPieces, "Rook");
                 JDialog dig = digBox.createDialog(null, "pawn at end of board");
 
                 do {
@@ -217,7 +217,7 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
                     strStatusMsg = pawnObject.getErrorMsg();
                     break;
                 case 1:
-                    strStatusMsg = rockObject.getErrorMsg();
+                    strStatusMsg = rookObject.getErrorMsg();
                     break;
                 case 2:
                     strStatusMsg = knightObject.getErrorMsg();
