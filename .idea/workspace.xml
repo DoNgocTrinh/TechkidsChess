@@ -3,29 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="76f2158d-2950-4750-9c30-c5e5685bdf61" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ChessGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/Bishop.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/Bishop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/CellMatrix.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/CellMatrix.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/Chess.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/Chess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/ChessBoard.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/ChessBoard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/ChessGUI.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/ChessGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/ChessPiece.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/ChessPiece.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/CreateAppletImage.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/CreateAppletImage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/King.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/King.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/Knight.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/Knight.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/PaintInstruction.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/PaintInstruction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/Pawn.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/Pawn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/Queen.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/Queen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/Rook.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/Rook.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ChessDemo/WindowChessBoard.class" afterPath="$PROJECT_DIR$/out/production/ChessDemo/WindowChessBoard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bishop.java" afterPath="$PROJECT_DIR$/src/Bishop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ChessPiece.java" afterPath="$PROJECT_DIR$/src/ChessPiece.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/King.java" afterPath="$PROJECT_DIR$/src/King.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Knight.java" afterPath="$PROJECT_DIR$/src/Knight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Queen.java" afterPath="$PROJECT_DIR$/src/Queen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Rook.java" afterPath="$PROJECT_DIR$/src/Rook.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/windowChessBoard.java" afterPath="$PROJECT_DIR$/src/windowChessBoard.java" />
     </list>
     <ignored path="TechkidsChess.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -134,8 +112,8 @@
       <file leaf-file-name="WindowChessBoard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/WindowChessBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            <state relative-caret-position="272">
+              <caret line="19" column="47" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -815,7 +793,7 @@
       <workItem from="1465062470057" duration="847000" />
       <workItem from="1465064696567" duration="4779000" />
       <workItem from="1465070269143" duration="15000" />
-      <workItem from="1465070301254" duration="1678000" />
+      <workItem from="1465070301254" duration="1778000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1465065293738</created>
@@ -852,11 +830,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465066958273</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1465071992444</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1465071992444</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7319000" />
+    <option name="totallyTimeSpent" value="7419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1157,8 +1142,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WindowChessBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        <state relative-caret-position="272">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="47" />
           <folding />
         </state>
       </provider>
