@@ -12,6 +12,11 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
     private String[] strWhitePieces = {"whitePawn.png", "whiteRock.png", "whiteKnight.png", "whiteBishop.png", "whiteQueen.png", "whiteKing.png"};
     private Color colorGreen = new Color(0x4CAF50);
     private MediaTracker mt;
+    private boolean isClicked=false;
+    private final String MESS_START="Click New Game to start!";
+    private final String MESS_IN_GAME="You are in game!";
+    private JLabel label;
+
 
     public Container createGUI(JFrame mainApp) {
 
@@ -58,15 +63,20 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
         }
 
         JPanel panBottomHalf = new JPanel(new BorderLayout());
-
         JPanel panNewGame = new JPanel();
+        JPanel panel = new JPanel();
+        label=new JLabel(MESS_START);
 
         panRoot.add(mainChessBoard, BorderLayout.NORTH);
         panRoot.add(panBottomHalf, BorderLayout.SOUTH);
+
+        panBottomHalf.add(panel, BorderLayout.NORTH);
         panBottomHalf.add(panNewGame, BorderLayout.SOUTH);
         panNewGame.add(cmdNewGame);
+        panel.add(label);
         panRoot.setBackground(colorGreen);
         panNewGame.setBackground(colorGreen);
+        panel.setBackground(colorGreen);
 
         cmdNewGame.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
@@ -78,6 +88,7 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
 
         if (e.getSource() == cmdNewGame) {
             mainChessBoard.newGame();
+            label.setText(MESS_IN_GAME);
         }
 
     }
