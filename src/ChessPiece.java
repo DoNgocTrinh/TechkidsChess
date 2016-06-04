@@ -9,27 +9,20 @@ public abstract class ChessPiece {
 
     //Checks the cell to make sure it is empty
     private boolean checkAxisMove(int newRow, int newColumn, int[][] playerMatrix) {
-
         if (playerMatrix[newRow][newColumn] != 0) //If not empty
         {
-
             strErrorMsg = "A piece is blocking the route"; //Error message
             return false;
-
         }
-
         return true;
-
     }
 
     //Method for checking the path to the destination and making sure nothing is in the way
     protected boolean axisMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, boolean straightAxis) {
-
         if (straightAxis) //Moving along a straight axis (rock, queen)
         {
             if ((startColumn == desColumn) || (startRow != desRow)) //Moving along the same column
             {
-
                 if (desRow < startRow) //Moving N
                 {
                     //Checks each cell between the start row - 1 (since don't need to check the cell it is in) to the destination cell
@@ -39,112 +32,73 @@ public abstract class ChessPiece {
                             return false;
                         }
                     }
-
                 } else //Moving S
                 {
-
                     for (int newRow = (startRow + 1); newRow < desRow; newRow++) {
-
                         if (!checkAxisMove(newRow, desColumn, playerMatrix)) {
                             return false;
                         }
-
                     }
-
                 }
-
             }
-
         } else //Moving diagonal (bishop/queen)
         {
-
             strErrorMsg = "The destination is not on the same diagonal line"; //Default error message
             int newColumn = 0;
-
             if (desRow < startRow && desColumn < startColumn) //If moved NW
             {
                 //The number of cells moved horizontal should equal the number of cells moved vertical
                 if ((desRow - startRow) == (desColumn - startColumn)) {
-
                     for (int newRow = (startRow - 1); newRow > desRow; newRow--) {
-
                         newColumn = startColumn - (startRow - newRow);
-
                         if (!checkAxisMove(newRow, newColumn, playerMatrix)) {
                             return false;
                         }
-
                     }
-
                 } else {
                     return false;
                 }
-
             } else if (desRow < startRow && desColumn > startColumn) //If moved NE
             {
-
                 if ((desRow - startRow) == (startColumn - desColumn)) {
-
                     for (int newRow = (startRow - 1); newRow > desRow; newRow--) {
-
                         newColumn = startColumn + (startRow - newRow);
-
                         if (!checkAxisMove(newRow, newColumn, playerMatrix)) {
                             return false;
                         }
-
                     }
-
                 } else {
                     return false;
                 }
-
             } else if (desRow > startRow && desColumn < startColumn) //If moved SW
             {
-
                 if ((startRow - desRow) == (desColumn - startColumn)) {
-
                     for (int newRow = (startRow + 1); newRow < desRow; newRow++) {
-
                         newColumn = startColumn - (newRow - startRow);
-
                         if (!checkAxisMove(newRow, newColumn, playerMatrix)) {
                             return false;
                         }
-
                     }
-
                 } else {
                     return false;
                 }
-
             } else if (desRow > startRow && desColumn > startColumn) //If moved SE
             {
-
                 if ((startRow - desRow) == (startColumn - desColumn)) {
-
                     for (int newRow = (startRow + 1); newRow < desRow; newRow++) {
-
                         newColumn = startColumn + (newRow - startRow);
-
                         if (!checkAxisMove(newRow, newColumn, playerMatrix)) {
                             return false;
                         }
-
                     }
-
                 } else {
                     return false;
                 }
-
             }
         }
-
         finalDesRow = desRow;
         finalDesColumn = desColumn;
-
         return true;
-
     }
 
     public abstract boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer);
@@ -160,5 +114,4 @@ public abstract class ChessPiece {
     public String getErrorMsg() {
         return strErrorMsg;
     }
-
 }

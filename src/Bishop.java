@@ -13,7 +13,7 @@ public class Bishop extends ChessPiece {
     public boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer) {
         this.finalDesRow = desRow;
         this.finalDesColumn = desColumn;
+
         return this.axisMove(startRow, startColumn, desRow, desColumn, playerMatrix, false);
     }
-
 }

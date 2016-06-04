@@ -1,3 +1,4 @@
+import org.jcp.xml.dsig.internal.MacOutputStream;
 public class Knight extends ChessPiece {
     /**
      *
@@ -14,35 +15,10 @@ public class Knight extends ChessPiece {
         finalDesRow = desRow;
         finalDesColumn = desColumn;
         strErrorMsg = "Horse can only move in a L shape";
+        int dr = Math.abs(startRow - desRow);
+        int dc = Math.abs(startColumn - desColumn);
 
-        if (desRow == (startRow - 2) && desColumn == (startColumn - 1)) //2N, 1E
-        {
-            return true;
-        } else if (desRow == (startRow - 2) && desColumn == (startColumn + 1)) //2N, 1W
-        {
-            return true;
-        } else if (desRow == (startRow + 2) && desColumn == (startColumn - 1)) //2S, 1E
-        {
-            return true;
-        } else if (desRow == (startRow + 2) && desColumn == (startColumn + 1)) //2S, 1W
-        {
-            return true;
-        } else if (desRow == (startRow - 1) && desColumn == (startColumn - 2)) //1N, 2E
-        {
-            return true;
-        } else if (desRow == (startRow - 1) && desColumn == (startColumn + 2)) //1N, 2W
-        {
-            return true;
-        } else if (desRow == (startRow + 1) && desColumn == (startColumn - 2)) //1S, 2E
-        {
-            return true;
-        } else if (desRow == (startRow + 1) && desColumn == (startColumn + 2)) //1S, 2W
-        {
-            return true;
-        }
-
-        return false;
-
+        return (dr == 1 && dc == 2) || (dr == 2 && dc == 1);
     }
 
 }

@@ -14,13 +14,21 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
     private int currentPlayer = 1, startRow = 0, startColumn = 0, pieceBeingDragged = 0;
     private int startingX = 0, startingY = 0, currentX = 0, currentY = 0, refreshCounter = 0;
     private boolean firstTime = true, hasWon = false, isDragging = false;
+    private ChessPiece[] chessPieces = new ChessPiece[] {
+            new Pawn(),
+            new Rook(),
+            new Knight(),
+            new Bishop(),
+            new Queen(),
+            new King()
+    };
 
-    private Pawn pawnObject = new Pawn();
-    private Rook rookObject = new Rook();
-    private Knight knightObject = new Knight();
-    private Bishop bishopObject = new Bishop();
-    private Queen queenObject = new Queen();
-    private King kingObject = new King();
+//    private Pawn pawnObject = new Pawn();
+//    private Rook rookObject = new Rook();
+//    private Knight knightObject = new Knight();
+//    private Bishop bishopObject = new Bishop();
+//    private Queen queenObject = new Queen();
+//    private King kingObject = new King();
 
     public WindowChessBoard() {
 
@@ -88,69 +96,18 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
     private void checkMove(int desRow, int desColumn) {
 
         boolean legalMove = false;
+        ChessPiece chessPiece = this.chessPieces[pieceBeingDragged];
 
         if (cellMatrix.getPlayerCell(desRow, desColumn) == currentPlayer) {
             strStatusMsg = "Can not move onto a piece that is yours";
         } else {
-
-            switch (pieceBeingDragged) {
-
-                case 0:
-                    legalMove = pawnObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
-                    break;
-                case 1:
-                    legalMove = rookObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
-                    break;
-                case 2:
-                    legalMove = knightObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
-                    break;
-                case 3:
-                    legalMove = bishopObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
-                    break;
-                case 4:
-                    legalMove = queenObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
-                    break;
-                case 5:
-                    legalMove = kingObject.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
-                    break;
-
-            }
-
+            legalMove = chessPiece.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
         }
 
         if (legalMove) {
 
-            int newDesRow = 0;
-            int newDesColumn = 0;
-
-            switch (pieceBeingDragged) {
-
-                case 0:
-                    newDesRow = pawnObject.getDesRow();
-                    newDesColumn = pawnObject.getDesColumn();
-                    break;
-                case 1:
-                    newDesRow = rookObject.getDesRow();
-                    newDesColumn = rookObject.getDesColumn();
-                    break;
-                case 2:
-                    newDesRow = knightObject.getDesRow();
-                    newDesColumn = knightObject.getDesColumn();
-                    break;
-                case 3:
-                    newDesRow = bishopObject.getDesRow();
-                    newDesColumn = bishopObject.getDesColumn();
-                    break;
-                case 4:
-                    newDesRow = queenObject.getDesRow();
-                    newDesColumn = queenObject.getDesColumn();
-                    break;
-                case 5:
-                    newDesRow = kingObject.getDesRow();
-                    newDesColumn = kingObject.getDesColumn();
-                    break;
-
-            }
+            int newDesRow = chessPiece.getDesRow();
+            int newDesColumn = chessPiece.getDesColumn();
 
             cellMatrix.setPlayerCell(newDesRow, newDesColumn, currentPlayer);
 
@@ -211,28 +168,7 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
 
         } else {
 
-            switch (pieceBeingDragged) {
-
-                case 0:
-                    strStatusMsg = pawnObject.getErrorMsg();
-                    break;
-                case 1:
-                    strStatusMsg = rookObject.getErrorMsg();
-                    break;
-                case 2:
-                    strStatusMsg = knightObject.getErrorMsg();
-                    break;
-                case 3:
-                    strStatusMsg = bishopObject.getErrorMsg();
-                    break;
-                case 4:
-                    strStatusMsg = queenObject.getErrorMsg();
-                    break;
-                case 5:
-                    strStatusMsg = kingObject.getErrorMsg();
-                    break;
-
-            }
+            strStatusMsg = chessPiece.getErrorMsg();
 
             unsucessfullDrag(desRow, desColumn);
 
