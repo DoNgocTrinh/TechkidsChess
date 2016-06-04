@@ -1,4 +1,4 @@
-//Author: ^-^ Veerle ^-^
+
 import javax.swing.JFrame;
 
 //Chess piece images from http://world.std.com/~wij/fixation/chess-sets.html

@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.io.*;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 public class CreateAppletImage
@@ -10,9 +11,14 @@ public class CreateAppletImage
 	public Image getImage (Object parentClass, String path, int fileSize)
 	{
 		
-		byte buff[] = createImageArray(parentClass, path, fileSize);
-		return Toolkit.getDefaultToolkit().createImage(buff);
-		
+
+		try {
+			return ImageIO.read(new File("src/"+path));
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+
 	}
 	
 	public ImageIcon getImageIcon (Object parentClass, String path, String description, int fileSize)
