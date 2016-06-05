@@ -36,7 +36,6 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
         cmdNewGame.addActionListener(this);
 
         try {
-
             Image[] imgRed = new Image[6];
             Image[] imgBlue = new Image[6];
             mt = new MediaTracker(mainApp);
@@ -81,6 +80,8 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
 
         cmdNewGame.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
+        this.newGame();
+
         return panRoot;
 
     }
@@ -88,10 +89,13 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == cmdNewGame) {
-            mainChessBoard.newGame();
-            label.setText(MESS_IN_GAME);
+            this.newGame();
         }
+    }
 
+    private void newGame() {
+        mainChessBoard.newGame();
+        label.setText(MESS_IN_GAME);
     }
 
     public void keyTyped(KeyEvent e) {

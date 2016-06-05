@@ -101,7 +101,7 @@ public class WindowChessBoard extends ChessBoard implements MouseListener, Mouse
         if (cellMatrix.getPlayerCell(desRow, desColumn) == currentPlayer) {
             strStatusMsg = "Can not move onto a piece that is yours";
         } else {
-            legalMove = chessPiece.legalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
+            legalMove = chessPiece.checkLegalMove(startRow, startColumn, desRow, desColumn, cellMatrix.getPlayerMatrix(), currentPlayer);
         }
 
         if (legalMove) {

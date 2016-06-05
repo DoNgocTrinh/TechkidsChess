@@ -9,7 +9,7 @@ public class King extends ChessPiece {
      * @param currentPlayer
      * @return true if the move is possible, false if not
      */
-    public boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer) {
+    public boolean checkLegalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer) {
 
         finalDesRow = desRow;
         finalDesColumn = desColumn;

@@ -101,7 +101,7 @@ public abstract class ChessPiece {
         return true;
     }
 
-    public abstract boolean legalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer);
+    public abstract boolean checkLegalMove(int startRow, int startColumn, int desRow, int desColumn, int[][] playerMatrix, int currentPlayer);
 
     public int getDesRow() {
         return finalDesRow;

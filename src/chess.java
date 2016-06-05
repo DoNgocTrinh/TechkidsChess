@@ -5,7 +5,7 @@ public class Chess extends JFrame {
 
     public static void main(String[] args) {
 
-        JFrame frame = new JFrame("Techkids - Chess"); //Title
+        JFrame frame = new JFrame("Chess"); //Title
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         ChessGUI chessWindow = new ChessGUI();
