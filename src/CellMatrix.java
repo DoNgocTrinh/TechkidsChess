@@ -51,7 +51,10 @@ public class CellMatrix {
     }
 
     public int getPlayerCell(int row, int column) {
-        return playerMatrix[row][column];
+        if(row>=0 && column>=0) {
+            return playerMatrix[row][column];
+        }
+        return -1;
     }
 
     public int getPieceCell(int row, int column) {

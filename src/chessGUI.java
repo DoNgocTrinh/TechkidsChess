@@ -80,8 +80,6 @@ public class ChessGUI implements ActionListener, KeyListener, WindowFocusListene
 
         cmdNewGame.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
-        this.newGame();
-
         return panRoot;
 
     }
