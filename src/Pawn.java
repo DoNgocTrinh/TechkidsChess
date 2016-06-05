@@ -13,6 +13,10 @@ public class Pawn extends ChessPiece {
         boolean legalMove = true;
         int[] playerPawnStart = {6, 1};
 
+        if(desColumn == startColumn && playerMatrix[desRow][desColumn] != 0) {
+            return false;
+        }
+
         if ((currentPlayer == 1 && desRow >= startRow) || (currentPlayer == 2 && desRow <= startRow)) //If moving in wrong direction
         {
             strErrorMsg = "Can not move in that direction";
